@@ -43,6 +43,7 @@ Git test text.
 git add readme.txt
 ~~~
 没有提示，说明添加文件的步骤没有问题。
+可以使用 git add . 命令添加当前文件夹的内容。
 
 3.使用 git commit 命令将文件提交到仓库：
 ~~~bash
@@ -254,3 +255,6 @@ git merge test
 ~~~bash
 git branch -d test
 ~~~
+
+## GitLab的使用
+Gitlab 的使用方法和 Github 类似，需要注册账号，设置 SSH Key。
