@@ -210,6 +210,11 @@ Branch 'master' set up to track remote branch 'master' from 'origin'.
 git clone git@github.com:younghz/Markdown.git
 ~~~
 
+* 克隆指定分支
+~~~bash
+git clone -b branch_name git@github.com:younghz/Markdown.git
+~~~
+
 ## 分支管理
 * 创建分支
 ~~~bash
