@@ -10,7 +10,7 @@ Github 官网：[https://github.com/](https://github.com/)
 ## 在 Windows 上安装 Git
 Git 官方下载地址：[https://git-scm.com/downloads](https://git-scm.com/downloads)，这个链接国内基本下不了，考虑使用国内镜像：[https://npm.taobao.org/mirrors/git-for-windows/](https://npm.taobao.org/mirrors/git-for-windows/)，下载完成之后按默认选项安装即可。
 在安装路径下找到命令行工具 git-bash.exe，表明已经安装完成。
-![img/img1.png](img/img1.png)
+![](img/img1.png)
 
 ## Git 配置用户名和邮箱
 Git安装完成后，在命令行工具中配置 Github 用户名和账号：
@@ -57,7 +57,7 @@ git commit -m "添加readme文件"
 Git test text.
 Git modify text.
 ~~~
-假设我们已经不记得项目做了什么改动，则我们可以使用 git status 查看当前仓库中的内容和项目中的内容有何不同：
+假设我们已经不记得项目做了什么改动，则我们可以使用 git status 查看工作区与暂存区有何不同：
 ~~~bash
 $ git status
 On branch master
@@ -92,10 +92,10 @@ nothing to commit, working tree clean
 ~~~
 此时，所有修改已经提交到仓库了。
 
-其实，在 Windows 的 GUI 中，我们还可以方便地查看项目哪些修改还没有提交：
+实际上，在 Windows 的 GUI 中，我们还可以方便地查看项目工作区的改动：
 ![](img/img2.png)
 ![](img/img3.png)
-图1是还没有提交到仓库，图2是已经提交。
+图1是还没有提交，图2是已经提交。
 
 ## 版本回退
 1.使用 git log 可以查看仓库历史修改：
@@ -131,12 +131,14 @@ $ git reflog
 34ad77e (HEAD -> master) HEAD@{2}: commit (initial): 添加readme文件
 ~~~
 
+* 其他Git常见撤销操作参考：[https://mp.weixin.qq.com/s/VhMgTq993lTqGIvcDSaOZQ](https://mp.weixin.qq.com/s/VhMgTq993lTqGIvcDSaOZQ)
+
 ## 删除文件
 我们先创建一个新文件，命名为 test.txt，然后提交到仓库。
 
 删除文件分两种情况：
 
-1.当我们删除工作区的文件，希望更新到仓库，把仓库中的文件也删除，可以先使用 git rm 命令删除文件，然后再 commit：
+1.当我们删除工作区的文件，希望更新到工作区，把仓库中的文件也删除，可以先使用 git rm 命令删除文件，然后再 commit：
 ~~~bash
 $ git rm test.txt
 rm 'test.txt'
@@ -215,6 +217,11 @@ git clone git@github.com:younghz/Markdown.git
 git clone -b branch_name git@github.com:younghz/Markdown.git
 ~~~
 
+## 从远程仓库抓取
+
+
+
+
 ## 分支管理
 * 创建分支
 ~~~bash
@@ -260,6 +267,3 @@ git merge test
 ~~~bash
 git branch -d test
 ~~~
-
-## GitLab的使用
-Gitlab 的使用方法和 Github 类似，需要注册账号，设置 SSH Key。
