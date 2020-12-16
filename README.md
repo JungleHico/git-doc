@@ -205,6 +205,11 @@ Branch 'master' set up to track remote branch 'master' from 'origin'.
 ~~~
 第一次推送时使用 -u 参数，关联本地 master 分支和远程的 master 分支，第一次推送时还会出现警告。
 
+其他与远程仓库相关的操作： 
+
+1. 查看关联的远程仓库：`git remote -v`
+2. 取消关联某个远程仓库：`git remote remove <name>`
+
 ## 克隆远程仓库
 ![](img/img5.png)
 
