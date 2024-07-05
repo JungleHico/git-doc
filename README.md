@@ -305,3 +305,23 @@ git merge test
 ~~~bash
 git branch -d test
 ~~~
+
+
+
+## 标签
+
+- 添加标签：
+
+```sh
+git tag <标签名> <提交节点hash值>
+```
+
+- 推送到仓库：
+
+```sh
+# 推送某个标签
+git push origin <标签名>
+# 推送所有标签
+git push origin --tags
+```
+
